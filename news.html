@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Good Wars новостной портал</title>
+  <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <img src="images/gw.gif" alt="logo" style="margin-right: auto; max-width: 90px; max-height: 90px;">
+          <form id="search-form">
+            <input type="text" id="search-input" placeholder="Искать...">
+            <button type="submit" class="btn iw-modal-btn">Поиск</button> 
+          </form>
+          <li><a href="index.html" class="nav square">Главная</a></li>
+          <li><a href="news.html" class="nav square-block square">Новости</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+      <div class="container">
+        <h1>Новости</h1>
+      </div>
+      <div id="search-results" class="container">
+      </div>
+    <section class="recent-news">
+      <div class="container">
+        <div class="news-list" id="news">
+          <div id="news-feed"></div> 
+          
+        </div>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/search.js" ></script>
+  </main>
+  
+  <footer>
+    <div class="container">
+      <div class="about">
+        <h3><img src="images/favicon.png" alt="gw gif" style="margin-right: auto; max-width: 20px; max-height: 20px;"> О проекте</h3>
+        <p>Good Wars - это захватывающий многопользовательский сервер с акцентом на кооперацию</p>  
+      </div>
+      <div class="contacts">
+        <h3>Контакты</h3>
+        <h4>Почта</h4>
+        <h5>goodwarshelp@vk.com</h5>
+      </div>
+    </div>
+    <div class="copyright">
+      <a href="" style="color: #fff; text-decoration: none;">&copy;</a> Good Wars, 2022-2024
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+/* Общие стили */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  background-image: linear-gradient(to bottom, #525252, #333);
+  padding-top: 90px; 
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* Основной контент */
+
+section {
+  padding: 40px 0;
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.news-highlights {
+  background-color: #3f3f3f;
+}
+
+.highlights-list article {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #696969;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);  
+}
+
+/* Подвал */
+footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: auto; 
+  padding: 20px 4px 4px 4px;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 14px;
+}
+news-feed {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.news-item {
+  background-color: #555555;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.479);
+}
+
+.news-item h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #f5f5f5;
+}
+
+.news-item p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #e4e4e4;
+}
+
+@media (max-width: 600px) {
+  .news-item {
+    padding: 10px;
+  }
+  
+  .news-item h2 {
+    font-size: 18px;
+  }
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px; 
+  background: orange;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.btn:hover {
+  background: orange; 
+}
+/* Шапка */
+
+header {
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999; 
+}
+
+.header-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+header nav a {
+  color: #fff;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+
+.nav{
+  display: inline-block;
+  padding: 10px 20px; 
+  background: #3d3d3d;
+  color: #ffffff;
+  text-decoration: none;
+}
+.nav:hover {
+  background: orange; 
+}
+.nav-block {
+  background: orange; 
+}
+.square {
+  width: auto;
+  background: #3d3d3d;
+  position: relative;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.square-block {
+  width: auto;
+  background: orange;
+  position: relative;
+  transition: transform 0.5s ease;
+}
+.square::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.links {
+  color: orange;
+}
+
+/* Полоса прокрутки */
+body::-webkit-scrollbar {
+  width: 10px; /* Ширина всего элемента навигации */
+}
+
+body::-webkit-scrollbar-track {
+  background: #3d3d3d; /* Цвет дорожки */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: orange; /* Цвет бегунка */
+  border-radius: 15px; /* Округление бегунка */
+  border: 2px solid rgb(255, 145, 0); /* Оформление границ бегунка */
+}
+
+/********Модальное окно************/
+
+.back:hover, .iw-modal-btn:hover {
+  /* -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1); */
+  -webkit-transform: scale(1.1);
+-moz-transform: scale(1.1); 
+-o-transform: scale(1.1);
+transform: scale(1.1);
+ -webkit-transition: all 0.5s ease;
+ -moz-transition: all 0.5s ease;
+ transition: all 0.5s ease;
+ background:rgb(238, 155, 0);
+}
+body.iw-modal-open { 
+  overflow: hidden;
+} 
+/*CSS-свойства для заднего фона модального окна*/
+.iw-modal {
+ opacity: 0; /*изначально этот блок должен быть прозрачным*/ 
+ background: rgba(0,0,0,0.7); /*задаём цвет фона*/
+ pointer-events: none; /*делаем чтобы по элементу нельзя было кликнуть когда он прозрачный*/
+  position: fixed; 
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 9999;
+ transition: all 0.5s ease;
+   margin: 0;
+   padding: 0;
+   overflow-y: auto;
+}
+
+.iw-modal:target {
+   opacity: 1; /*при клике окно становится видимым*/
+ pointer-events: auto; /*теперь по окну можно кликать мышкой*/
+   overflow-y: auto; /*прокрутка по вертикли страницы*/
+}
+
+.iw-modal-wrapper {
+ margin:auto; /*выравниваем окно по центру по горизонтали*/
+ margin-top:40px; /*отступ сверху можно задавать в px, % или vh*/
+ max-width: 800px;
+}
+
+/*CSS-свойства для блока, содержащего контент модального окна */ 
+.iw-CSS-modal-inner {
+   position: relative;
+   background: #555; /*цвет фона*/
+   border: 1px solid #686868; /*цвет и толщина рамки*/
+   border-radius: 15px; /*радиус скругления углов*/
+   overflow-y: scroll;
+   max-height: 450px;
+   margin-top: auto;
+   overflow: auto;
+}
+
+/* Полоса прокрутки */
+.iw-CSS-modal-inner::-webkit-scrollbar {
+  width: 10px; /* Ширина всего элемента навигации */
+}
+
+.iw-CSS-modal-inner::-webkit-scrollbar-track {
+  background: #555; /* Цвет дорожки */
+  border-radius: 15px; /* Округление бегунка */
+}
+
+.iw-CSS-modal-inner::-webkit-scrollbar-thumb {
+  background-color: orange; /* Цвет бегунка */
+  border-radius: 15px; /* Округление бегунка */
+  border: 2px solid rgb(255, 145, 0); /* Оформление границ бегунка */
+}
+
+
+/*CSS-свойства заголовка модального окна */
+.iw-modal-header {
+   padding: 15px;/*внутренний отступ*/
+   background:#3f3f3f;/*цвет фона*/
+ position:relative;
+ border-radius: 15px;
+}
+.iw-modal-title {
+ font-size: 18px; /*размер шрифта*/
+ color:#b8b8b8; /*цвет шрифта*/
+ font-weight:bold; /*жирность шрифта*/
+   line-height: 1.5; /*высота строки*/
+   margin-top: 0;
+   margin-bottom: 0;
+   border-radius: 15px;
+}
+
+/*CSS для кнопки закрытия окна*/
+.iw-close {
+  position:absolute;
+  top:10px; /*отступ сверху*/
+  right:10px; /*отступ справа*/
+  font-size: 24px; /*размер шрифта*/
+  color: #f5f5f5; /*цвет шрифта*/
+  text-decoration: none;
+}
+
+.iw-close:hover, .iw-close:focus {
+   color: #ff0000c5; /*цвет шрифта при наведении*/
+   cursor: pointer;
+}
+
+/*CSS для блока с текстом модального окна*/
+
+.iw-modal-text {
+ padding: 15px 20px; /*внутренний отступ*/
+}
+
+/**MEDIA**/
+@media (min-width: 550px) {
+ .iw-modal-wrapper {
+     max-width: 500px;
+  }
+}
+/**end.Модальное окно**/
+
+.search {
+  margin: 20px 0; 
+}
+
+#search-input {
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 300px;
+}
+
+.no-news {
+  text-align: center; 
+  margin: 50px;
+}
+
+code{
+  margin-left: 0px;
+  background-color: #696969;
+  border-radius: 5px;
+}
