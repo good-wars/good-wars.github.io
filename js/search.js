@@ -17,12 +17,17 @@ async function search(query) {
     return n.title.includes(query);
   });
 
-  let html = '';
-  filtered.forEach(n => {
-    html += `<a href="#iw-modal${n.id}" class="btn iw-modal-btn">${n.title} (Открыть)</a>`; 
-  });
+  if (filtered.length === 0) {
+    results.innerHTML = '<h3>По вашему запросу ничего не найдено</h3>';
+    return; 
+  } else {
 
+    let html = '';
+    filtered.forEach(n => {
+      html += `<a href="#iw-modal${n.id}" class="btn iw-modal-btn">${n.title} (Открыть)</a>`; 
+  });
   results.innerHTML = html;
+}
 }
 
 // Обработка формы
@@ -33,4 +38,5 @@ form.addEventListener('submit', e => {
   if (!query) return;
 
   search(query);
+
 });
