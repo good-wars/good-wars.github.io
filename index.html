@@ -39,31 +39,24 @@
         <a href="https://t.me/+SlM9YGhN1D0wOWVi" target="_blank"><img src="images/tg.png" class="btn iw-modal-btn" style="max-width: 20px; max-height: 20px;"></a>
       </div>
       <script src="js/showimg.js"></script>
+      <div class="news-item">
         <h1>Наши кланы!</h1>
-        <!-- The grid: four columns -->
-        <div class="row">
-          <div class="column">
-            <img src="images/galactikguard.png" alt="Nature" onclick="openImg(this);">
-          </div>
-          <div class="column">
-            <img src="images/bg.png" alt="Snow" onclick="openImg(this);">
-          </div>
-          <div class="column">
-            <img src="images/bg.png" alt="Mountains" onclick="openImg(this);">
-          </div>
 
-<!-- The expanding image container -->
-<div class="container">
-  <!-- Close the image -->
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        <div class="image-gallery">
 
-  <!-- Expanded image -->
-  <img id="expandedImg" style="width:100%">
-
-  <!-- Image text -->
-  <div id="imgtext"></div>
-</div>
+          <img src="images/galactikguard.png" class="galaryimg" onclick="openImage(this)">
+          
+          <img src="images/bg.png" class="galaryimg" onclick="openImage(this)">
+        
+          <img src="images/bg.png" class="galaryimg" onclick="openImage(this)">
+        
+        </div>
       </div>
+        <div id="fullScreenImage" class="modal">
+          <span class="close" onclick="closeImage()">&times;</span>
+          <img id="fullScreenImg">
+        </div>
+
       <div class="news-item">
         <h1>Как к нам попасть?</h1>
         <p>Для тех, кто хочет присоединиться к нашему проекту, мы приготовили для вас специальную <a class="btn iw-modal-btn" target="_blank" href="https://forms.gle/qptAfNpeTfEXbYbX7">Google форму</a></p>
