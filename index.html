@@ -7,8 +7,6 @@
   <html lang="ru">
   <title>Good Wars</title>
   <link rel="stylesheet" href="/styles/styles.css">
-  <link rel="js" href="js/modal.js">
-  <link rel="js" href="js/jquery.min.js">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -39,6 +37,34 @@
         <p style="margin-top:5px;">Наши сой-сети:</p> 
         <a href="https://vk.com/goodwars_mc" target="_blank"><img src="images/vk.png" class="btn iw-modal-btn" style="max-width: 20px; max-height: 20px;">
         <a href="https://t.me/+SlM9YGhN1D0wOWVi" target="_blank"><img src="images/tg.png" class="btn iw-modal-btn" style="max-width: 20px; max-height: 20px;"></a>
+      </div>
+      <script src="js/showimg.js"></script>
+      <div class="news-item">
+        <h1>Наши кланы!</h1>
+        <!-- The grid: four columns -->
+        <div class="row">
+          <div class="column">
+            <img src="images/galactikguard.png" alt="Nature" onclick="openImg(this);">
+          </div>
+          <div class="column">
+            <img src="images/bg.png" alt="Snow" onclick="openImg(this);">
+          </div>
+          <div class="column">
+            <img src="images/bg.png" alt="Mountains" onclick="openImg(this);">
+          </div>
+        </div>
+
+<!-- The expanding image container -->
+<div class="container">
+  <!-- Close the image -->
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  <!-- Expanded image -->
+  <img id="expandedImg" style="width:100%">
+
+  <!-- Image text -->
+  <div id="imgtext"></div>
+</div>
       </div>
       <div class="news-item">
         <h1>Как к нам попасть?</h1>
