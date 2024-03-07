@@ -1,6 +1,6 @@
 // Получить новости с сервера
 async function getNews() {
-    const response = await fetch('/data/news.json');
+    const response = await fetch('https://github.com/good-wars/data/tree/main/news.json');
     const news = await response.json();
     return news;
 }
@@ -37,7 +37,7 @@ async function showNews() {
                </div>
                <div class="iw-modal-text">    
                  <p>${item.text}</p>
-                 <img src="images/${item.image}" alt="Изображение новости">
+                 <img src="https://raw.githubusercontent.com/good-wars/data/main/assets/${item.image}" alt="Изображение новости">
                </div>
         </div>
       </div>	
