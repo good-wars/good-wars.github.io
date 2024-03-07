@@ -1,3 +1,4 @@
 {
-    "workbench.iconTheme": "vs-seti"
+    "workbench.iconTheme": "vs-seti",
+    "liveServer.settings.CORS": true
 }
