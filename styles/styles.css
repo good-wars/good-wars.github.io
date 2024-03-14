@@ -305,7 +305,7 @@ body.iw-modal-open {
 }
 /**end.Модальное окно**/
 
-.search {
+/* .search {
   margin: 20px 0; 
 }
 
@@ -314,7 +314,7 @@ body.iw-modal-open {
   border-radius: 4px;
   font-size: 16px;
   width: 300px;
-}
+} */
 
 .no-news {
   text-align: center; 
@@ -363,4 +363,64 @@ code{
 .galaryimg{
   max-width: 144px;
   max-height: 256px;
+}
+
+input{
+  background-color: #333;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 300px;
+}
+.hint:hover + #search-input{
+  background-color: #424242;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 300px;
+}
+
+.animationLoader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: #333;
+  z-index: 1001;
+}
+
+.animationLoader __image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  width: 74px;
+  height: 74px;
+  margin-top: -42px;
+  margin-left: -42px;
+  background: url('gw.gif') no-repeat 50% 50%; /*в ссылке указываете путь до GIF-картинки, расположенной на вашем сайте*/
+}
+
+.lanimation_hiding .animationLoader {
+  transition: 0.3s opacity;
+  opacity: 0;
+}
+
+.animation .animationLoader {
+  display: none;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  pointer-events: none;
 }

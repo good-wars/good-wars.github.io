@@ -8,14 +8,17 @@
 </head>
 <body>
 
+  <div class="animationLoader">
+    <div class="animationLoader__image"></div>
+  </div>
+
   <header>
     <div class="container">
       <nav>
         <ul>
           <img src="https://raw.githubusercontent.com/good-wars/data/main/assets/gw.gif" alt="logo" style="margin-right: auto; max-width: 90px; max-height: 90px;">
           <form id="search-form">
-            <input type="text" id="search-input" placeholder="Искать...">
-            <button type="submit" class="btn iw-modal-btn">Поиск</button> 
+            <input type="text submit" id="search-input" placeholder="Искать..."> 
           </form>
           <li><a href="index.html" class="nav square">Главная</a></li>
           <li><a href="news.html" class="nav square-block square">Новости</a></li>
@@ -37,8 +40,6 @@
         </div>
       </div>
     </section>
-    <script src="js/script.js"></script>
-    <script src="js/search.js" ></script>
   </main>
   
   <footer>
@@ -57,6 +58,9 @@
       <a href="copy.html" style="color: #fff; text-decoration: none;">&copy;</a> Good Wars, 2022-2024
     </div>
   </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/search.js" ></script>
 
 </body>
 </html>

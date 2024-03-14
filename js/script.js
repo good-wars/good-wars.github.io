@@ -1,3 +1,11 @@
+window.onload = function () {
+    document.body.classList.add('animation_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('animation');
+      document.body.classList.remove('animation_hiding');
+    }, 600);
+  }
+
 // Получить новости с сервера
 async function getNews() {
     const response = await fetch('https://github.com/good-wars/data/tree/main/news.json');
