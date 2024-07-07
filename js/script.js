@@ -8,7 +8,7 @@ window.onload = function () {
 
 // Получить новости с сервера
 async function getNews() {
-    const response = await fetch('https://github.com/good-wars/data/tree/main/news.json');
+    const response = await fetch('/news/news.json');
     const news = await response.json();
     return news;
 }
